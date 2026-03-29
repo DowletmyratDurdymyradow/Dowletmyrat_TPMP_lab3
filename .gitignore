@@ -1,0 +1,10 @@
+# Object files
+*.o
+
+# Executables
+example1
+example2
+example3
+
+# Local SQLite databases
+*.db
