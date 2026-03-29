@@ -1,0 +1,45 @@
+# Overview
+
+Source C project with examples for SQLite database usage.
+
+# Usage
+
+Use `gcc` and `sqlite3` to build and run examples.
+
+# Building
+
+```bash
+gcc -o {binary_file} {c_source_file}.c -l sqlite3
+```
+
+# Database initialization
+
+Create a local database from SQL script (do not commit binary DB files):
+
+```bash
+cd src
+sqlite3 students.db < init_students.sql
+```
+
+Then run examples:
+
+```bash
+gcc -o example1 example1_connection.c -l sqlite3
+./example1
+gcc -o example2 example2_create_table.c -l sqlite3
+./example2
+gcc -o example3 example3_insert_into_table.c -l sqlite3
+./example3
+```
+
+# Additional Notes
+
+The repository contains C source files and SQL initialization script.
+
+# Author
+
+Dowletmyrat
+
+# Отчет по лабораторной работе 3
+
+Публичная ссылка на отчет: TODO
