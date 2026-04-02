@@ -1,24 +1,18 @@
-CC=gcc
-CFLAGS=-Wall -Wextra -std=c11
-LDFLAGS=-lsqlite3
+#Makefile for C-project and sqlite database
 
-SRC_DIR=src
+studentapp: build/main.o build/students.o
+	gcc -o studentapp build/main.o build/students.o -l sqlite3
 
-all: example1 example2 example3 students
+build/main.o: src/main.c src/students.h
+	mkdir -p build
+	gcc -c -o build/main.o src/main.c
 
-example1: $(SRC_DIR)/example1_connection.c
-	$(CC) $(CFLAGS) -o $@ $< $(LDFLAGS)
-
-example2: $(SRC_DIR)/example2_create_table.c
-	$(CC) $(CFLAGS) -o $@ $< $(LDFLAGS)
-
-example3: $(SRC_DIR)/example3_insert_into_table.c
-	$(CC) $(CFLAGS) -o $@ $< $(LDFLAGS)
-
-students: $(SRC_DIR)/students.c $(SRC_DIR)/students.h
-	$(CC) $(CFLAGS) -o $@ $(SRC_DIR)/students.c $(LDFLAGS)
+build/students.o: src/students.c src/students.h
+	gcc -c -o build/students.o src/students.c
 
 clean:
-	rm -f example1 example2 example3 students
+	rm -f *.o ./studentapp
+	rm -rf build/
 
-.PHONY: all clean
+run:
+	./studentapp

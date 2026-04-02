@@ -2,10 +2,10 @@
 *.o
 
 # Executables
-example1
-example2
-example3
-students
+studentapp
+
+# Build folder
+build/
 
 # Local SQLite databases
 *.db

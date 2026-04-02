@@ -1,10 +1,10 @@
 # Overview
 
-Source C project for sqlite database using.
+Source C project with structures.
 
 # Usage
 
-Use `make`, `Makefile` and `sqlite3` to build project.
+Use `make` to build project.
 
 # Building
 
@@ -12,6 +12,12 @@ Use follow command:
 
 ```bash
 make
+```
+
+Run app:
+
+```bash
+make run
 ```
 
 # Database initialization
@@ -22,15 +28,6 @@ Create local database from SQL script:
 cd src
 sqlite3 students.db < init_students.sql
 cd ..
-```
-
-# Run examples
-
-```bash
-./example1
-./example2
-./example3
-./students
 ```
 
 # Additional Notes
