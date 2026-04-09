@@ -8,6 +8,7 @@ int main(int argc, char *argv[]) {
     (void)argc;
     (void)argv;
 
+    rc = sqlite3_open("src/students.db", &db);
     rc = sqlite3_open("students.db", &db);
 
     if (rc) {

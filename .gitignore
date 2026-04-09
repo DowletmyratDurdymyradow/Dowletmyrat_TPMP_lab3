@@ -2,6 +2,10 @@
 *.o
 
 # Executables
+studentapp
+
+# Build folder
+build/
 example1
 example2
 example3

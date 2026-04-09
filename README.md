@@ -1,5 +1,23 @@
 # Overview
 
+Source C project with structures.
+
+# Usage
+
+Use `make` to build project.
+
+# Building
+
+Use follow command:
+
+```bash
+make
+```
+
+Run app:
+
+```bash
+make run
 Source C project with examples for SQLite database usage.
 
 # Usage
@@ -14,11 +32,13 @@ gcc -o {binary_file} {c_source_file}.c -l sqlite3
 
 # Database initialization
 
+Create local database from SQL script:
 Create a local database from SQL script (do not commit binary DB files):
 
 ```bash
 cd src
 sqlite3 students.db < init_students.sql
+cd ..
 ```
 
 Then run examples:
@@ -34,6 +54,7 @@ gcc -o example3 example3_insert_into_table.c -l sqlite3
 
 # Additional Notes
 
+The repository with `C` source files and Makefile.
 The repository contains C source files and SQL initialization script.
 
 # Author
