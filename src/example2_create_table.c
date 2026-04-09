@@ -24,6 +24,7 @@ int main(int argc, char *argv[]) {
     (void)argv;
 
     rc = sqlite3_open("src/students.db", &db);
+    rc = sqlite3_open("students.db", &db);
 
     if (rc) {
         fprintf(stderr, "Can't open database: %s\n", sqlite3_errmsg(db));

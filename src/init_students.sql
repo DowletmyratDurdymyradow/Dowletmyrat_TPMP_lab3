@@ -5,6 +5,10 @@ DROP TABLE IF EXISTS subjects;
 DROP TABLE IF EXISTS marks;
 DROP TABLE IF EXISTS students;
 DROP TABLE IF EXISTS groups;
+-- Lab 3 Part 1 bootstrap script for students.db
+DROP TABLE IF EXISTS students;
+DROP TABLE IF EXISTS groups;
+DROP TABLE IF EXISTS marks;
 
 CREATE TABLE students (
   Student_id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
@@ -96,3 +100,13 @@ INSERT INTO marks (Student_id, Subject_id, Date, Mark) VALUES
 (2, 3, '2022-04-17', 3),
 (1, 1, '2022-04-20', 5),
 (2, 3, '2022-04-20', 8);
+('Nina','Stomina',15,160,54,21),
+('Aina','Myradova',13,168,58,20),
+('Maksat','Nuryev',14,175,72,22),
+('Leyla','Ataeva',15,166,55,20);
+
+INSERT INTO groups (Group_id, Name) VALUES
+(13, 'Group 13'),
+(14, 'Group 14'),
+(15, 'Group 15'),
+(16, 'Group 16');

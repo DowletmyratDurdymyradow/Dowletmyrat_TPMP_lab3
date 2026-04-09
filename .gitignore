@@ -6,6 +6,9 @@ studentapp
 
 # Build folder
 build/
+example1
+example2
+example3
 
 # Local SQLite databases
 *.db
